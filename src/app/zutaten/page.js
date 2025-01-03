@@ -4,21 +4,22 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 const recipes = [
-  +{ id: 1, name: "Aglio e Olio", ingredients: ["Pasta", "Olivenöl", "Knoblauch"], status: "vegitarisch" },
- + {id: 2, name: "Sticky sesame soycaulliflower", ingredients: ["Blumenkohl", "Mehl", "Knoblauch", "Sojasauce", "Tomatenmark", "Reisessig", "Sesamöl", "Stärke"], status: "vegan"},
- + {id:3, name: "Dan Dan Nudeln", ingredients: ["Hackfleisch", "Knoblauch", "Ingwer", "Frühlingszwiebeln", "Sojasauce", "Reisessig", "Sesamöl", "Asia-Nudeln"], status: "fleischhaltig"},
-  +{id:4, name: "Chilli Knoblauch Nudeln", ingredients: ["Knoblauch", "Ingwer", "Frühlingszwiebeln", "Sojasauce", "Schwarzer Essig", "Chilliflocken", "Sesamsamen", "Hackfleisch", "Asia-Nudeln"], status: "fleischhaltig"},
- + {id:5, name: "Pfannkuchen", ingredients: ["Mehl", "Milch", "Eier", "Zucker", "Salz"], status: "vegitarisch"},
- + {id:6, name: "Asia Garlic Noodles", ingredients: ["Knoblauch", "Asia-Nudeln", "Sojasauce", "Austernsauce"], status: "fleischhaltig"},
- + {id:7, name: "Knoblauchbrot", ingredients: ["Olivenöl", "Knoblauch", "Rosmarin", "Petersilie", "Baguette"], status: "vegitarisch"},
-  {id:8, name: "Maisbomben", ingredients: ["Mais", "Stärke", "Mehl", "Ei", "Mozerella"] , status: "vegitarisch"},
- + {id:9, name: "Taco Beef Dorito Crumb", ingredients:["Hackfleisch", "Zwiebeln", "Tomaten", "Tortillas", "Koriander", "Mozerella"], status: "fleischhaltig"},
-  {id:10, name: "Patatas Acordeon", ingredients:["Kartoffeln", "olivenöl"] , status: "vegan"},
-  {id:11, name: "Chipotle Chicken Wraps", ingredients:["Hänchen", "Chilli", "Knoblauch", "Mozerella", "Zwiebel", "Salat", "yogurt", "mayo", "Petersilie", "Tortillas"], status: "fleischhaltig"},
-  {id:12, name: "Bacon Jam Cheese Burger Eggrolls", ingredients:["Bacon", "Zwiebel",  "Rinderbrühe", "Worcestershire Sauce", "Hackfleisch", "Reispapier", "Käse", "EI"], status: "fleischhaltig"},
-  ];
+  { id: 1, name: "Aglio e Olio", ingredients: ["Pasta", "Olivenöl", "Knoblauch"], status: "vegitarisch" },
+  { id: 2, name: "Sticky sesame soycaulliflower", ingredients: ["Blumenkohl", "Mehl", "Knoblauch", "Sojasauce", "Tomatenmark", "Reisessig", "Sesamöl", "Stärke"], status: "vegan" },
+  { id: 3, name: "Dan Dan Nudeln", ingredients: ["Hackfleisch", "Knoblauch", "Ingwer", "Frühlingszwiebeln", "Sojasauce", "Reisessig", "Sesamöl", "Asia-Nudeln"], status: "fleischhaltig" },
+  { id: 4, name: "Chilli Knoblauch Nudeln", ingredients: ["Knoblauch", "Ingwer", "Frühlingszwiebeln", "Sojasauce", "Schwarzer Essig", "Chilliflocken", "Sesamsamen", "Hackfleisch", "Asia-Nudeln"], status: "fleischhaltig" },
+  { id: 5, name: "Pfannkuchen", ingredients: ["Mehl", "Milch", "Eier"], status: "vegitarisch" },
+  { id: 6, name: "Asia Garlic Noodles", ingredients: ["Knoblauch", "Asia-Nudeln", "Sojasauce", "Austernsauce"], status: "fleischhaltig" },
+  { id: 7, name: "Knoblauchbrot", ingredients: ["Olivenöl", "Knoblauch", "Rosmarin", "Petersilie", "Baguette"], status: "vegitarisch" },
+  { id: 8, name: "Maisbomben", ingredients: ["Mais", "Stärke", "Mehl", "Ei", "Mozerella"], status: "vegitarisch" },
+  { id: 9, name: "Taco Beef Dorito Crumb", ingredients: ["Hackfleisch", "Zwiebeln", "Tomaten", "Tortillas", "Koriander", "Mozerella"], status: "fleischhaltig" },
+  { id: 10, name: "Patatas Acordeon", ingredients: ["Kartoffeln", "olivenöl"], status: "vegan" },
+  { id: 11, name: "Chipotle Chicken Wraps", ingredients: ["Hänchen", "Chilli", "Knoblauch", "Mozerella", "Zwiebel", "Salat", "yogurt", "mayo", "Petersilie", "Tortillas"], status: "fleischhaltig" },
+  { id: 12, name: "Bacon Jam Cheese Burger Eggrolls", ingredients: ["Bacon", "Zwiebel", "Rinderbrühe", "Worcestershire Sauce", "Hackfleisch", "Reispapier", "Käse", "EI"], status: "fleischhaltig" }
+];
 
-const ingredientsList = ["Pasta", "Olivenöl", "Knoblauch", "Blumenkohl", "Mehl", "Sojasauce", "Tomatenmark", "Reisessig", "Sesamöl", "Stärke", "Hackfleisch", "Ingwer", "Frühlingszwiebeln", "Asia-Nudeln", "Schwarzer Essig", "Chilliflocken", "Sesamsamen", "Milch", "Eier", "Zucker", "Salz", "Austernsauce", "Rosmarin", "Petersilie", "Baguette", "Mais", "Mozerella", "Zwiebeln", "Tomaten", "Tortillas", "Koriander", "Kartoffeln", "Hänchen", "Chilli", "yogurt", "mayo", "Bacon", "Rinderbrühe", "Worcestershire Sauce", "Reispapier", "Käse"]
+
+const ingredientsList = ["Pasta", "Olivenöl", "Knoblauch", "Blumenkohl", "Mehl", "Sojasauce", "Tomatenmark", "Reisessig", "Sesamöl", "Stärke", "Hackfleisch", "Ingwer", "Frühlingszwiebeln", "Asia-Nudeln", "Schwarzer Essig", "Chilliflocken", "Sesamsamen", "Milch", "Eier", "Austernsauce", "Rosmarin", "Petersilie", "Baguette", "Mais", "Mozerella", "Zwiebeln", "Tomaten", "Tortillas", "Koriander", "Kartoffeln", "Hänchen", "Chilli", "yogurt", "mayo", "Bacon", "Rinderbrühe", "Worcestershire Sauce", "Reispapier", "Käse"]
 ;
 
 export default function ZutatenPage() {
@@ -32,9 +33,12 @@ export default function ZutatenPage() {
     );
   };
 
-  const filteredRecipes = recipes.filter((recipe) =>
-    recipe.ingredients.every((ingredient) => selectedIngredients.includes(ingredient))
+  const filteredRecipes = recipes.filter(
+    (recipe) =>
+      Array.isArray(recipe.ingredients) &&
+      recipe.ingredients.every((ingredient) => selectedIngredients.includes(ingredient))
   );
+  
 
   return (
     <main className="flex flex-col items-center">
@@ -47,14 +51,15 @@ export default function ZutatenPage() {
       <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
         {ingredientsList.map((ingredient) => (
           <button
-            key={ingredient}
-            className={`bg-white hover:bg-gray-300 text-black font-bold py-2 px-4 rounded ${
-              selectedIngredients.includes(ingredient) ? "bg-green-500" : ""
-            }`}
-            onClick={() => handleButtonClick(ingredient)}
-          >
-            {ingredient}
-          </button>
+          key={ingredient}
+          className={`bg-white hover:bg-gray-300 text-black font-bold py-2 px-4 rounded ${
+            selectedIngredients.includes(ingredient) ? "   bg-green-400" : ""
+          }`}
+          onClick={() => handleButtonClick(ingredient)}
+        >
+          {ingredient}
+        </button>
+        
         ))}
       </div>
 
