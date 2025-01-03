@@ -12,7 +12,7 @@ export default function Recipe1() {
       <h1 className="text-4xl text-black bg-gradient-to-r from-gray-200 to-gray-600 rounded-2xl pr-20 pl-20 p-4 mt-5 font-bold inline-block">Knoblauchbrot</h1>
       
       
-      <div className="flex flex-col h-screen w-screen text-black ml-8 mt-8">
+      <div className="flex flex-col items-center h-screen w-screen text-black ml-8 mt-8">
         <p className="text-xl mb-4">Hier ist das Rezept:</p>
         <button
           onClick={() => window.location.href = "https://www.tiktok.com/@aldisuedde/video/7443036500213697814"} 
