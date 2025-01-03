@@ -9,13 +9,13 @@ export default function Recipe1() {
           <a className="text-black bg-white p-4 font-bold rounded-xl">Ich-hab-hunger</a> 
         </div>
       </header>
-      <h1 className="text-4xl text-black bg-gradient-to-r from-gray-200 to-gray-600 rounded-2xl pr-20 pl-20 p-4 mt-5 font-bold inline-block">Dan Dan Nudeln</h1>
+      <h1 className="text-4xl text-black bg-gradient-to-r from-gray-200 to-gray-600 rounded-2xl pr-20 pl-20 p-4 mt-5 font-bold inline-block">XXX</h1>
       
       
       <div className="flex flex-col h-screen w-screen text-black ml-8 mt-8">
         <p className="text-xl mb-4">Hier ist das Rezept:</p>
         <button
-          onClick={() => window.location.href = "https://www.tiktok.com/@derekkchen/video/7400421427700157738"} 
+          onClick={() => window.location.href = "XXX"} 
           className="bg-black text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:scale-105 transform transition duration-300 ease-in-out"
         >
           Rezept ansehen

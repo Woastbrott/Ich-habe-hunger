@@ -8,18 +8,18 @@ const recipes = [
   { id: 2, name: "Sticky sesame soycaulliflower", ingredients: ["Blumenkohl", "Mehl", "Knoblauch", "Sojasauce", "Tomatenmark", "Reisessig", "Sesamöl", "Stärke"], status: "vegan" },
   { id: 3, name: "Dan Dan Nudeln", ingredients: ["Hackfleisch", "Knoblauch", "Ingwer", "Frühlingszwiebeln", "Sojasauce", "Reisessig", "Sesamöl", "Asia-Nudeln"], status: "fleischhaltig" },
   { id: 4, name: "Chilli Knoblauch Nudeln", ingredients: ["Knoblauch", "Ingwer", "Frühlingszwiebeln", "Sojasauce", "Schwarzer Essig", "Chilliflocken", "Sesamsamen", "Hackfleisch", "Asia-Nudeln"], status: "fleischhaltig" },
-  { id: 5, name: "Pfannkuchen", ingredients: ["Mehl", "Milch", "Eier"], status: "vegitarisch" },
+  { id: 5, name: "Banana Pancakes", ingredients: ["Banane","Mehl", "Milch", "Eier"], status: "vegitarisch" },
   { id: 6, name: "Asia Garlic Noodles", ingredients: ["Knoblauch", "Asia-Nudeln", "Sojasauce", "Austernsauce"], status: "fleischhaltig" },
   { id: 7, name: "Knoblauchbrot", ingredients: ["Olivenöl", "Knoblauch", "Rosmarin", "Petersilie", "Baguette"], status: "vegitarisch" },
-  { id: 8, name: "Maisbomben", ingredients: ["Mais", "Stärke", "Mehl", "Ei", "Mozerella"], status: "vegitarisch" },
+  { id: 8, name: "Maisbomben", ingredients: ["Mais", "Stärke", "Mehl", "Eier", "Mozerella"], status: "vegitarisch" },
   { id: 9, name: "Taco Beef Dorito Crumb", ingredients: ["Hackfleisch", "Zwiebeln", "Tomaten", "Tortillas", "Koriander", "Mozerella"], status: "fleischhaltig" },
-  { id: 10, name: "Patatas Acordeon", ingredients: ["Kartoffeln", "olivenöl"], status: "vegan" },
-  { id: 11, name: "Chipotle Chicken Wraps", ingredients: ["Hänchen", "Chilli", "Knoblauch", "Mozerella", "Zwiebel", "Salat", "yogurt", "mayo", "Petersilie", "Tortillas"], status: "fleischhaltig" },
-  { id: 12, name: "Bacon Jam Cheese Burger Eggrolls", ingredients: ["Bacon", "Zwiebel", "Rinderbrühe", "Worcestershire Sauce", "Hackfleisch", "Reispapier", "Käse", "EI"], status: "fleischhaltig" }
+  { id: 10, name: "Patatas Acordeon", ingredients: ["Kartoffeln", "Olivenöl"], status: "vegan" },
+  { id: 11, name: "Chipotle Chicken Wraps", ingredients: ["Hänchen", "Chilli", "Knoblauch", "Mozerella", "Zwiebeln", "Salat", "yogurt", "mayo", "Petersilie", "Tortillas"], status: "fleischhaltig" },
+  { id: 12, name: "Bacon Jam Cheese Burger Eggrolls", ingredients: ["Bacon", "Zwiebeln", "Rinderbrühe", "Worcestershire Sauce", "Hackfleisch", "Reispapier", "Käse", "EierÖ"], status: "fleischhaltig" }
 ];
 
 
-const ingredientsList = ["Pasta", "Olivenöl", "Knoblauch", "Blumenkohl", "Mehl", "Sojasauce", "Tomatenmark", "Reisessig", "Sesamöl", "Stärke", "Hackfleisch", "Ingwer", "Frühlingszwiebeln", "Asia-Nudeln", "Schwarzer Essig", "Chilliflocken", "Sesamsamen", "Milch", "Eier", "Austernsauce", "Rosmarin", "Petersilie", "Baguette", "Mais", "Mozerella", "Zwiebeln", "Tomaten", "Tortillas", "Koriander", "Kartoffeln", "Hänchen", "Chilli", "yogurt", "mayo", "Bacon", "Rinderbrühe", "Worcestershire Sauce", "Reispapier", "Käse"]
+const ingredientsList = ["Pasta", "Olivenöl", "Banane", "Knoblauch", "Blumenkohl", "Mehl", "Sojasauce", "Tomatenmark", "Salat", "Reisessig", "Sesamöl", "Stärke", "Hackfleisch", "Ingwer", "Frühlingszwiebeln", "Asia-Nudeln", "Schwarzer Essig", "Chilliflocken", "Sesamsamen", "Milch", "Eier", "Austernsauce", "Rosmarin", "Petersilie", "Baguette", "Mais", "Mozerella", "Zwiebeln", "Tomaten", "Tortillas", "Koriander", "Kartoffeln", "Hänchen", "Chilli", "yogurt", "mayo", "Bacon", "Rinderbrühe", "Worcestershire Sauce", "Reispapier", "Käse"]
 ;
 
 export default function ZutatenPage() {
